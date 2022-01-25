@@ -35,9 +35,11 @@ namespace BooksAPI
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "BooksAPI by az1k3");
-                c.RoutePrefix = string.Empty;
+                c.RoutePrefix = "swagger";
             });
 
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
 
             app.UseDeveloperExceptionPage();
 
